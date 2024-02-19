@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+header {
+    background-color: #1D2F30;
+    padding: 17px;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.content {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div nav {
+    display: flex;
+    gap: 64px;
+}
+
+nav button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 1px 7px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+nav > button h3 {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+nav h3:hover {
+    transition: 230ms;
+    color: #BAE249;
+}
+
+nav h3:active {
+    color: #688B05;
+    transition: 230ms;
+}
+
+nav button:focus {
+    transition: 230ms;
+    outline: 1px solid #BAE249;
+}
+
+nav button:active, #hero section button:active {
+    transition: 230ms;
+    color: #688B05;
+}
+
+#buttons {
+    display: flex;
+    gap: 64px;
+}
+
+#buttons a {
+    text-decoration: none;
+    text-transform: none;
+    width: 28px;
+    height: 28px;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+#buttons a:focus {
+    transition: 230ms;
+    outline: 1px solid #83A440;
+}
+
+#search:hover path, #log-in:hover path{
+    stroke: #91AC46;
+    transition: 230ms;
+}
+
+#search:active path, #log-in:active path {
+    stroke: #688B05;
+    transition: 230ms;
+}
+
+#hero {
+    background-blend-mode: overlay;
+    background-image: url("../image/bg1.png");
+    background-color: rgba(29, 47, 48, 0.75);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    padding: 175px 0 115px;
+}
+
+#hero section {
+    width: 688px;
+}
+
+#hero section h1 {
+    font-family: "Cormorant", serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    color: white;
+}
+
+#hero section h4 {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    line-break: strict;
+}
+
+#hero section button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 2px 7px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #BAE249;
+    border-radius: 3px;
+}
+
+#hero section button:hover {
+    transition: 230ms;
+    color: #91AC46;
+}
+
+#hero section button:focus {
+    transition: 230ms;
+    outline: 1px solid #83A440;
+}
+
+#hero section button:hover svg path {
+    transition: 230ms;
+    fill: #91AC46;
+}
+
+#card {
+    background-color: #1D2F30;
+    padding-top: 60px;
+}
+
+.page {
+    display: none;
+}
+  
+.elem1, .elem2, .elem3 {
+    width: 255px;
+    height: 493px;
+    background-color: #1D2F30;
+    outline: 1px solid #0B1919;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.elem1 span h1, .elem2 span h1, .elem3 span h1 {
+    margin: 16px 16px 8px 16px;
+    font-family: "Cormorant", serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+}
+
+.elem1 span p, .elem2 span p, .elem3 span p {
+    margin-right: 16px;
+    margin-left: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #899D9D;
+}
+
+.elem1 button, .elem2 button, .elem3 button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #BAE249;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: 1px solid #BAE249;
+    border-radius: 3px;
+    padding: 10px 28px;
+    margin: 0 0 24px 16px;
+    cursor: pointer;
+}
+
+.elem1 button:focus, .elem2 button:focus, .elem3 button:focus {
+    border: 1px solid #BAE249;
+    outline-offset: 1px;
+    transition: 230ms;
+}
+
+.elem1 button:hover, .elem2 button:hover, .elem3 button:hover {
+    background-color: #BAE249;
+    color: #0B1919;
+    transition: 230ms;
+}
+
+.elem1 button:active, .elem2 button:active, .elem3 button:active {
+    background-color: #688B05;
+    color: #0B1919;
+    border: none;
+    transition: 230ms;
+}
+  
+.active {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+  
+#controller {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26px;
+}
+
+#controller button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    height: 24px;
+    padding: 3px 2px 0 2px;
+    border-radius: 3px;
+}
+
+#controller h4 {
+    font-family: "Cormorant", serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    margin: 0 30px;
+}
+
+#left:hover svg path, #right:hover svg path {
+    transition: 230ms;
+    fill: #BAE249;
+}
+
+#left:focus, #right:focus {
+    transition: 230ms;
+    outline: 1px solid #BAE249;
+}
+
+#left:active svg path, #right:active svg path {
+    fill: #688B05;
+    transition: 230ms;
+}
+
+#new {
+    background-color: #1D2F30;
+    padding: 57px 0 60px;
+}
+
+.italic_title {
+    font-family: "Cormorant", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 48px;
+    color: white;
+}
+
+#new section h1 {
+    margin-bottom: 30px;
+}
+
+#new section > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#new section > div > img {
+    width: 825px;
+    height: 493px;
+}
+
+#info {
+    max-width: 255px;
+    background-color: #BAE249;
+    padding: 16px 16px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+#info h3 {
+    font-family: "Cormorant", serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #1D2F30;
+    margin-bottom: 8px;
+}
+
+#info div {
+    margin-bottom: 25px;
+}
+
+#info div p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #506829;
+}
+
+#info div > p:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+#info button {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    margin-top: auto;
+    width: 176px;
+    padding: 2.5px 5px;
+    border-radius: 3px;
+}
+
+#info button p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0B1919;
+    margin-right: auto;
+}
+
+#info button:hover p {
+    color: #688B05;
+    transition: 230ms;
+}
+
+#info button:hover svg path {
+    fill: #688B05;
+    transition: 230ms;
+}
+
+#info button:focus {
+    outline: 1px solid #83A440;
+    transition: 230ms;
+}
+
+#form {
+    background-blend-mode: overlay;
+    background-image: url("../image/bg2.png");
+    background-color: rgba(29, 47, 48, 0.9);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#form form {
+    width: 825px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#form form h1 {
+    margin-top: 60px;
+}
+
+#form form p {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    line-break: strict;
+}
+
+#form form input {
+    width: 350px;
+    border: none;
+    background-color: white;
+    padding: 11.5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    outline-offset: 3px;
+    border-radius: 3px;
+    color: #0B1919;
+}
+
+#form form input::placeholder {
+    font-weight: 400;
+}
+
+#form form input:hover {
+    background-color: #899D9D;
+    transition: 230ms;
+}
+
+#form form input:focus {
+    outline: 1px solid #83A440;
+    transition: 230ms;
+}
+
+#form form button {
+    width: 145px;
+    padding: 11.5px 26px;
+    border: none;
+    background-color: #BAE249;
+    color: #1D2F30;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    cursor: pointer;
+    border-radius: 3px;
+    outline-offset: 3px;
+}
+
+#form form button:hover {
+    background-color: #91AC46;
+    transition: 230ms;
+}
+
+#form form button:focus {
+    outline: 1px solid #83A440;
+    transition: 230ms;
+}
+
+#soc-media {
+    background-color: #0B1919;
+    padding: 18px 0;
+}
+
+#soc-media > .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#soc-media > .content button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+#youtube:hover path, #instagram:hover path, #facebook:hover path, #x:hover path {
+    fill: #BAE249;
+    transition: 230ms;
+}
+
+#soc-media > .content button:focus {
+    outline: 1px solid #83A440;
+    transition: 230ms;
+}
+
+#youtube:active path, #instagram:active path, #facebook:active path, #x:active path {
+    fill: #688B05;
+    transition: 230ms;
+}
+
+#copyright {
+    background-color: #1D2F30;
+    padding: 3px 0;
+}
+
+#copyright > .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#copyright > .content p {
+    color: #899D9D;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
